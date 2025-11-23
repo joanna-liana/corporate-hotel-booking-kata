@@ -5,7 +5,10 @@
   "main": "index.js",
   "scripts": {
     "test": "jest",
-    "build": "tsc"
+    "build": "tsc",
+    "db:generate": "drizzle-kit generate",
+    "db:migrate": "tsx src/db/migrate.ts",
+    "db:studio": "drizzle-kit studio"
   },
   "repository": {
     "type": "git",
@@ -19,9 +22,21 @@
     "url": "https://github.com/joanna-liana/corporate-hotel-booking-kata/issues"
   },
   "homepage": "https://github.com/joanna-liana/corporate-hotel-booking-kata#readme",
+  "dependencies": {
+    "drizzle-orm": "^0.36.4",
+    "pg": "^8.13.1"
+  },
   "devDependencies": {
     "@types/jest": "^30.0.0",
     "@types/node": "^24.10.1",
+    "@types/pg": "^8.11.10",
+    "@typescript-eslint/eslint-plugin": "^8.47.0",
+    "@typescript-eslint/parser": "^8.47.0",
+    "drizzle-kit": "^0.30.0",
+    "dotenv": "^16.4.7",
+    "eslint": "^9.39.1",
+    "tsx": "^4.19.2",
+    "eslint-plugin-simple-import-sort": "^12.1.1",
     "jest": "^30.2.0",
     "ts-jest": "^29.4.5",
     "typescript": "^5.9.3"
