@@ -47,6 +47,7 @@ export default defineConfig([{
 
     indent: ['error', 2, {
       ignoredNodes: ['PropertyDefinition'],
+      SwitchCase: 1,
     }],
 
     'max-len': ['error', 120],
